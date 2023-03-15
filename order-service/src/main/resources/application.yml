@@ -6,12 +6,22 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
+  application:
+    name: orderserver # order服务的服务名称
 mybatis:
-  type-aliases-package: cn.itcast.user.pojo
+  type-aliases-package: cn.jutta.user.pojo
   configuration:
     map-underscore-to-camel-case: true
 logging:
   level:
-    cn.itcast: debug
+    cn.jutta: debug
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
+
+
+
+eureka:
+  client:
+    service-url: # eureka的地址信息
+      defaultZone: http://127.0.0.1:10086/eureka
+      register-with-eureka: false

@@ -1,6 +1,6 @@
-package cn.itcast.order.mapper;
+package cn.jutta.order.mapper;
 
-import cn.itcast.order.pojo.Order;
+import cn.jutta.order.pojo.Order;
 import org.apache.ibatis.annotations.Select;
 
 public interface OrderMapper {

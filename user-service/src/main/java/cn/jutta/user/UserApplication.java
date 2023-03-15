@@ -1,10 +1,10 @@
-package cn.itcast.user;
+package cn.jutta.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.mybatis.spring.annotation.MapperScan;
 
-@MapperScan("cn.itcast.user.mapper")
+@MapperScan("cn.jutta.user.mapper")
 @SpringBootApplication
 public class UserApplication {
     public static void main(String[] args) {
