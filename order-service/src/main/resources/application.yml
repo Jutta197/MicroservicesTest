@@ -18,10 +18,18 @@ logging:
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
 
-
-
 eureka:
   client:
     service-url: # eureka的地址信息
       defaultZone: http://127.0.0.1:10086/eureka
       register-with-eureka: false
+
+userserver:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule # 负载均衡规则
+
+ribbon:
+  eager-load: # 饥饿加载
+    enabled: true
+    clients:
+      - userserver

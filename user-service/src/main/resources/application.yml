@@ -17,9 +17,6 @@ logging:
     cn.jutta: debug
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
-
-
-
 eureka:
   client:
     service-url: # eureka的地址信息
