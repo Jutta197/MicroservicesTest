@@ -11,9 +11,10 @@ spring:
   cloud:
     nacos:
       server-addr: localhost:8848 # nacos 服务地址
-      discovery:
-        cluster-name: SZ-B # 集群名  但还是优先负载均衡，还要配置rule才是集群优先的负载均衡
-        namespace: 671d7164-707c-4cd9-bd3e-a01a9cef8ac8 # dev环境
+#      discovery:
+#        cluster-name: SZ-B # 集群名  但还是优先负载均衡，还要配置rule才是集群优先的负载均衡
+##        namespace: 671d7164-707c-4cd9-bd3e-a01a9cef8ac8 # dev环境
+#        ephemeral: false # 是否是临时实例
 mybatis:
   type-aliases-package: cn.jutta.user.pojo
   configuration:
