@@ -42,3 +42,8 @@ ribbon:
     enabled: true
     clients:
       - userserver
+#feign:
+#  client:
+#    config:
+#      default:
+#        logger-level: full # 配置文件配置 还可以在java代码中配置

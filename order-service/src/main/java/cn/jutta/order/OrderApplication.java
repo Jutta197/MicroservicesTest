@@ -1,5 +1,6 @@
 package cn.jutta.order;
 
+import cn.jutta.order.config.DefaultFeignConfiguration;
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
 import org.mybatis.spring.annotation.MapperScan;
@@ -12,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 
 @MapperScan("cn.jutta.order.mapper")
 @SpringBootApplication
-@EnableFeignClients
+@EnableFeignClients(defaultConfiguration = DefaultFeignConfiguration.class)
 public class OrderApplication {
 
     public static void main(String[] args) {
