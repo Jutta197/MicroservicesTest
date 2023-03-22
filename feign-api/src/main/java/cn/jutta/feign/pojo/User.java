@@ -1,4 +1,4 @@
-package cn.jutta.order.pojo;
+package cn.jutta.feign.pojo;
 
 import lombok.Data;
 

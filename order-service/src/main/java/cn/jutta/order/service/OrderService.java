@@ -1,12 +1,12 @@
 package cn.jutta.order.service;
 
-import cn.jutta.order.clients.UserClient;
+
+import cn.jutta.feign.clients.UserClient;
+import cn.jutta.feign.pojo.User;
 import cn.jutta.order.mapper.OrderMapper;
 import cn.jutta.order.pojo.Order;
-import cn.jutta.order.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 

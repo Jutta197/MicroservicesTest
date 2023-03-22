@@ -1,5 +1,6 @@
 package cn.jutta.order.pojo;
 
+import cn.jutta.feign.pojo.User;
 import lombok.Data;
 
 @Data

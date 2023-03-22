@@ -1,8 +1,7 @@
 package cn.jutta.order;
 
-import cn.jutta.order.config.DefaultFeignConfiguration;
-import com.netflix.loadbalancer.IRule;
-import com.netflix.loadbalancer.RandomRule;
+import cn.jutta.feign.clients.UserClient;
+import cn.jutta.feign.config.DefaultFeignConfiguration;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 
 @MapperScan("cn.jutta.order.mapper")
 @SpringBootApplication
-@EnableFeignClients(defaultConfiguration = DefaultFeignConfiguration.class)
+@EnableFeignClients(clients = UserClient.class, defaultConfiguration = DefaultFeignConfiguration.class)
 public class OrderApplication {
 
     public static void main(String[] args) {
@@ -23,7 +22,7 @@ public class OrderApplication {
     // 创建RestTemplate并注入Spring容器
     @Bean
     @LoadBalanced
-    public RestTemplate restTemplate(){
+    public RestTemplate restTemplate() {
         return new RestTemplate();
     }
 
